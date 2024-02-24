@@ -16,6 +16,11 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    avatar: {
+      type: String,
+      default:
+        "https://e0.pxfuel.com/wallpapers/771/37/desktop-wallpaper-default-baseball-cap-pfp-cute-instagram-fitted-hats-icon.jpg",
+    },
   },
   { timestamps: true }
 );
