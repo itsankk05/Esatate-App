@@ -20,7 +20,6 @@ import {
 } from "../redux/user/userSlice.js";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { disconnect } from "mongoose";
 
 export default function Profile() {
   const fileRef = useRef(null);
@@ -279,7 +278,9 @@ export default function Profile() {
                 >
                   Delete
                 </button>
-                <button className="text-green-700">Edit</button>
+                <Link to={`/update-listing/${listing._id}`}>
+                  <button className="text-green-700">Edit</button>
+                </Link>
               </div>
             </div>
           ))}
